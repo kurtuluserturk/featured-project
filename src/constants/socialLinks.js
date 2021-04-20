@@ -1,25 +1,40 @@
 import React from 'react'
-import { FaFacebook, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+import {
+    FaInstagramSquare,
+    FaLinkedin,
+    FaGithubSquare
+} from "react-icons/fa"
 
-export const social = [
+const social = [
     {
         id: 1,
-        url: 'https://www.facebook.com',
-        icon: <FaFacebook />
+        icon: <FaInstagramSquare className="social-icon"></FaInstagramSquare>,
+        url: "https://www.instagram.com",
     },
     {
         id: 2,
-        url: 'https://www.twitter.com',
-        icon: <FaTwitter />
-    },
-    {
-        id: 3,
-        url: 'https://www.linkedin.com',
-        icon: <FaLinkedin />
+        icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+        url: "https://www.linkedin.com",
     },
     {
         id: 4,
-        url: 'https://www.github.com',
-        icon: <FaGithub />
-    },
+        icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+        url: "https://github.com",
+    }
 ]
+
+const socialLinks = social.map(link => {
+    return (
+        <li key={link.id}>
+            <a href={link.url} className="social-link">
+                {link.icon}
+            </a>
+        </li>
+    )
+})
+
+export default ({ styleClass }) => {
+    return (
+        <ul className={`social-links ${styleClass ? styleClass : ""}`}>{socialLinks}</ul>
+    )
+}
