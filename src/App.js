@@ -1,8 +1,9 @@
 import { Switch, Route } from "react-router-dom"
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import Modal from "./components/Modal"
 import Home from "./pages/home"
 import Contact from "./pages/contact"
 
@@ -15,7 +16,6 @@ function App() {
         <Route path="/contact" component={Contact} />
       </Switch>
       <Footer />
-      <Modal />
     </>
   );
 }
