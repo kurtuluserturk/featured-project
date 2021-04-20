@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../logo-lorem.svg'
+import logo from '../assets/logo-lorem.svg'
 import Modal from './Modal'
 
 const Navbar = () => {

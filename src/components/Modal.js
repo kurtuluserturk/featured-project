@@ -30,7 +30,7 @@ const Modal = () => {
                         <input className="form-check-input" type="checkbox" id="gridCheck" />
                         <label className="form-check-label" htmlFor="gridCheck">
                             Remember me
-      </label>
+                        </label>
                     </div>
                 </div>
                 <button type="submit" className="btn btn-primary">Log in</button>
