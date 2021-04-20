@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+  --lightYellow: #ffc720;
+  --darkGreen: #005a00;
+  --lightGreen: #4da64d;
+  --transition: all 0.3s linear;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Oswald", sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 576px) {
+  .container-w-400 {
+    width: 400px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 425px) {
+  .container-w-310 {
+    width: 310px !important;
+  }
+}
+
+.text-title {
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.text-yellow {
+  color: var(--mainYellow);
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+.text-bright {
+  color: var(--lightBlue);
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+/* social links */
+.social-links {
+  margin-top: 2rem;
+  width: 15rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.social-link {
+  font-size: 1.75rem;
+  transition: var(--transition);
 }
 
-.App-link {
-  color: #61dafb;
+/*
+===============
+Footer
+===============
+*/
+.footer {
+  height: 9rem;
+  background: #222;
+  text-align: center;
+  display: grid;
+  place-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer h4 {
+  margin-top: 0.5rem;
+  color: var(--lightBlue);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.footer h4 span {
+  color: var(--lightYellow);
+}
+.footer-links {
+  margin: 0 auto 1rem auto;
+}
+.footer .social-link {
+  color: var(--mainWhite);
+}
+.footer .social-link:hover {
+  color: var(--lightYellow);
 }
