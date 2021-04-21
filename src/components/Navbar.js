@@ -2,8 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-lorem.svg'
 import Modal from './Modal'
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+    const { user } = useGlobalContext();
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/">
@@ -34,11 +37,9 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className="nav-item">
-
                         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            Log in
+                            {user ? user.firstName : 'Log in'}
                         </button>
-
                         <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div className="modal-dialog" role="document">
                                 <div className="modal-content">
@@ -46,7 +47,6 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-
                     </li>
                 </ul>
             </div>
