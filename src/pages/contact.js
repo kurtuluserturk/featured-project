@@ -33,8 +33,18 @@ const contact = () => {
                     </div>
                     <div className="form-row d-flex justify-content-center">
                         <div className="form-group col-md-6">
-                            <label htmlFor="myInput">Country</label>
-                            <input type="text" className="form-control" id="myInput" required />
+                            <label htmlFor="myCountry">Country</label>
+                            <input type="text" className="form-control" id="myCountry" list="countryList" required />
+                            <datalist id="countryList">
+                                <option value="TR">Turkey</option>
+                                <option value="US">United States of America</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="DE">Germany</option>
+                                <option value="SE">Sweden</option>
+                                <option value="KE">Kenya</option>
+                                <option value="BR">Brazil</option>
+                                <option value="ZW">Zimbabwe</option>
+                            </datalist>
                         </div>
                     </div>
                     <div className="form-row d-flex justify-content-center">
