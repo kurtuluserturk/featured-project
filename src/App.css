@@ -5,8 +5,6 @@
   --mainDark: #232528;
   --mainYellow: #ffa400;
   --lightYellow: #ffc720;
-  --darkGreen: #005a00;
-  --lightGreen: #4da64d;
   --transition: all 0.3s linear;
 }
 
@@ -34,26 +32,6 @@ body {
 }
 .text-yellow {
   color: var(--mainYellow);
-}
-.text-blue {
-  color: var(--mainBlue);
-}
-.text-bright {
-  color: var(--lightBlue);
-}
-
-.btn-black {
-  background: transparent;
-  text-transform: capitalize;
-  font-size: 0.8rem !important;
-  color: var(--mainDark);
-  border-radius: 0 !important;
-  border: 0.1rem solid var(--mainDark) !important;
-}
-
-.btn-black:hover {
-  background: var(--mainDark) !important;
-  color: var(--mainWhite) !important;
 }
 
 /* social links */
