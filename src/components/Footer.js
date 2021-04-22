@@ -1,14 +1,17 @@
 import React from 'react'
 import SocialLinks from '../constants/socialLinks'
-
+import { useTranslation } from "react-i18next"
 
 const Footer = () => {
+
+    const [t, i18n] = useTranslation('common');
+
     return (
         <footer className="footer">
             <div>
                 <SocialLinks styleClass="footer-links" />
-                <h4>copyright &copy;{new Date().getFullYear()}
-                    <span> DevKurtuluş</span> all rights reserved
+                <h4>{t('footer.copyright')} &copy;{new Date().getFullYear()}
+                    <span> DevKurtuluş</span> {t('footer.rights')}
                 </h4>
             </div>
         </footer>
