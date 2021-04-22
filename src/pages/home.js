@@ -4,7 +4,7 @@ import Title from '../components/Title'
 
 const Home = () => {
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
 
     return (
         <div className="py-5">

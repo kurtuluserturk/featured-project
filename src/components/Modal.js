@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 
 const Modal = () => {
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
 
     const {
         firstName,
@@ -37,6 +37,7 @@ const Modal = () => {
                             placeholder={t('modal.firstName')}
                             value={firstName}
                             onChange={(e) => { saveFirstName(e) }}
+                            autoComplete="name"
                             required
                         />
                     </div>
@@ -49,6 +50,7 @@ const Modal = () => {
                             placeholder={t('modal.lastName')}
                             value={lastName}
                             onChange={(e) => { saveLastName(e) }}
+                            autoComplete="name"
                             required
                         />
                     </div>
@@ -63,12 +65,13 @@ const Modal = () => {
                             placeholder={t('modal.email')}
                             value={email}
                             onChange={(e) => { saveEmail(e) }}
+                            autoComplete="current-password"
                             required
                         />
                     </div>
                     <div className="form-group col-md-6">
                         <label htmlFor="password">{t('modal.password')}:</label>
-                        <input type="password" className="form-control" id="password" placeholder={t('modal.password')} required />
+                        <input type="password" className="form-control" id="password" autoComplete="current-password" placeholder={t('modal.password')} required />
                     </div>
                 </div>
                 <button type="submit" className="btn btn-primary">{t('modal.login')}</button>

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 const Contact = () => {
 
-    const [t, i18n] = useTranslation('common');
+    const [t] = useTranslation('common');
 
     const {
         user,
@@ -32,6 +32,7 @@ const Contact = () => {
                                 id="contactFirstName"
                                 placeholder={t('contact.firstName')}
                                 defaultValue={user && user.firstName}
+                                autoComplete="name"
                                 onChange={(e) => { saveFirstName(e) }}
                                 required
                             />
@@ -47,6 +48,7 @@ const Contact = () => {
                                 placeholder={t('contact.lastName')}
                                 defaultValue={user && user.lastName}
                                 onChange={(e) => { saveLastName(e) }}
+                                autoComplete="name"
                                 required
                             />
                         </div>
@@ -61,6 +63,7 @@ const Contact = () => {
                                 placeholder={t('contact.email')}
                                 defaultValue={user && user.email}
                                 onChange={(e) => { saveEmail(e) }}
+                                autoComplete="email"
                                 required
                             />
                         </div>
@@ -75,6 +78,7 @@ const Contact = () => {
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 placeholder="777-444-9999"
                                 onChange={(e) => { savePhone(e) }}
+                                autoComplete="tel"
                                 required
                             />
                         </div>
@@ -88,6 +92,7 @@ const Contact = () => {
                                 id="myCountry"
                                 list="countryList"
                                 onChange={(e) => { saveCountryCode(e) }}
+                                autoComplete="country"
                                 required
                             />
                             <datalist id="countryList">
