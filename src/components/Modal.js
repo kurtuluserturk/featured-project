@@ -1,7 +1,11 @@
 import React from 'react'
 import { useGlobalContext } from "../context";
+import { useTranslation } from "react-i18next"
 
 const Modal = () => {
+
+    const [t, i18n] = useTranslation('common');
+
     const {
         firstName,
         lastName,
@@ -15,34 +19,34 @@ const Modal = () => {
 
     // if there's a user show the message below
     if (user) {
-        return <h3>{user.firstName} is loggged in</h3>;
+        return <h3>{user.firstName} {t('modal.userLogged')}</h3>;
     }
 
     // if there's no user, show the login form
     return (
         <div>
-            <h5>Log in Lorem</h5>
+            <h5>{t('modal.title')}</h5>
             <form onSubmit={handleModalSubmit}>
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <label htmlFor="firstName">First name:</label>
+                        <label htmlFor="firstName">{t('modal.firstName')}:</label>
                         <input
                             type="text"
                             className="form-control"
                             id="firstName"
-                            placeholder="First name"
+                            placeholder={t('modal.firstName')}
                             value={firstName}
                             onChange={(e) => { saveFirstName(e) }}
                             required
                         />
                     </div>
                     <div className="form-group col-md-6">
-                        <label htmlFor="lastName">Last name:</label>
+                        <label htmlFor="lastName">{t('modal.lastName')}:</label>
                         <input
                             type="text"
                             className="form-control"
                             id="lastName"
-                            placeholder="Last name"
+                            placeholder={t('modal.lastName')}
                             value={lastName}
                             onChange={(e) => { saveLastName(e) }}
                             required
@@ -51,23 +55,23 @@ const Modal = () => {
                 </div>
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">{t('modal.email')}:</label>
                         <input
                             type="email"
                             className="form-control"
                             id="email"
-                            placeholder="Email"
+                            placeholder={t('modal.email')}
                             value={email}
                             onChange={(e) => { saveEmail(e) }}
                             required
                         />
                     </div>
                     <div className="form-group col-md-6">
-                        <label htmlFor="password">Password:</label>
-                        <input type="password" className="form-control" id="password" placeholder="Password" required />
+                        <label htmlFor="password">{t('modal.password')}:</label>
+                        <input type="password" className="form-control" id="password" placeholder={t('modal.password')} required />
                     </div>
                 </div>
-                <button type="submit" className="btn btn-primary">Log in</button>
+                <button type="submit" className="btn btn-primary">{t('modal.login')}</button>
             </form>
         </div>
     )
