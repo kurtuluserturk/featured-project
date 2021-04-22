@@ -9,6 +9,15 @@
         },
         "login": "Giriş"        
     },
+     "modal": {
+        "userLogged": "giriş yaptı",
+        "title": "Giriş Lorem",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "email": "Email",
+        "password": "Şifre",
+        "login": "Giriş"
+    },
     "home": {
         "name":"Hoş geldiniz",
         "loremTitle1": "Lorem Ipsum Nedir?",

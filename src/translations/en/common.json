@@ -9,6 +9,15 @@
         },
         "login": "Log in"        
     },
+    "modal": {
+        "userLogged": "is loggged in",
+        "title": "Log in Lorem",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "password": "Password",
+        "login": "Log in"
+    },
     "home": {
         "name":"Welcome",
         "loremTitle1": "What is Lorem Ipsum?",
